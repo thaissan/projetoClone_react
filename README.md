@@ -10,10 +10,6 @@ Este projeto é uma aplicação em React.js desenvolvida durante a residência S
 
 ## Capturas de Tela
 
-### Tela de Login
-
-### Tela de Login
-
 ### Tela de Login Original
 ![Tela de Login](./src/assets/login.png)
 
