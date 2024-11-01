@@ -1,12 +1,14 @@
 import './App.css'
-import { TwitchLogin } from './pages/Login';
+// import { TwitchLogin } from './pages/Login';
+import { TwitchHome } from './pages/Home';
 
 function App() {
   return (
     
     <>
       <div>
-        <TwitchLogin />
+        {/* <TwitchLogin /> */}
+        <TwitchHome /> 
       </div>
     </>
   )
