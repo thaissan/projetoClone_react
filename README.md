@@ -22,8 +22,4 @@ Este projeto é uma aplicação em React.js desenvolvida durante a residência S
 ### Tela Home Clonada
 ![Tela Home](./src/assets/home-clone.png)
 
-### Tela Home
-
-Tela original:<br>
-Tela clonada:
 
