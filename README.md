@@ -12,8 +12,19 @@ Este projeto é uma aplicação em React.js desenvolvida durante a residência S
 
 ### Tela de Login
 
-Tela original:<br>
-Tela clonada:
+### Tela de Login
+
+### Tela de Login Original
+![Tela de Login](./src/assets/login.png)
+
+### Tela de Login Clonada
+![Tela de Login](./src/assets/login-clone.png)
+
+### Tela Home Original
+![Tela Home](./src/assets/home.png)
+
+### Tela Home Clonada
+![Tela Home](./src/assets/home-clone.png)
 
 ### Tela Home
 
