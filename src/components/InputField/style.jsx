@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const InputContainer = styled.form`
   display: flex;
@@ -19,11 +19,10 @@ export const Input = styled.input`
   border-radius: 5px;
   font-size: 1rem;
   /* width: 100%; */
-  
+
   &:focus {
     outline: none;
-    border-color: #772CE8; 
+    border-color: #772ce8;
     border-width: 0.2rem;
   }
 `;
-

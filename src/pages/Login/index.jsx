@@ -1,30 +1,38 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
-import { Modal, Container, CloseButton, Logo , Title, LoginLink, SubmitButton, Signup} from "./style";
-import { InputField } from "../../components/InputField"
-
+import { useState } from "react";
+import {
+  Modal,
+  Container,
+  CloseButton,
+  Logo,
+  Title,
+  LoginLink,
+  SubmitButton,
+  Signup,
+} from "./style";
+import { InputField } from "../../components/InputField";
 
 export const TwitchLogin = () => {
-    const [user, setUser] = useState('')
-    const [password, setPassword] = useState('')
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Login:', { user, password });
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Login:", { user, password });
+  };
 
-    return(
+  return (
     <Modal>
       <Container>
-      <CloseButton>×</CloseButton>       
+        <CloseButton>×</CloseButton>
         <Logo>
           <img src="src\assets\glitch_flat_purple.png" alt="Twitch Logo" />
-          <Title>Entrar na Twitch</Title> 
+          <Title>Entrar na Twitch</Title>
         </Logo>
 
         <form onSubmit={handleSubmit}>
-        <InputField
+          <InputField
             label="Usuário"
             type="text"
             value={user}
@@ -35,22 +43,19 @@ export const TwitchLogin = () => {
             type={"password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          /> 
+          />
 
           <LoginLink href="#">Problemas para efetuar login?</LoginLink>
 
-          <SubmitButton type="submit" 
-          disabled={!user || !password}>
+          <SubmitButton type="submit" disabled={!user || !password}>
             Entrar
           </SubmitButton>
-          </form>
+        </form>
 
-          <Signup>
-            <a href="#">Ainda não possui uma conta? Cadastrar-se</a>
-          </Signup>
+        <Signup>
+          <a href="#">Ainda não possui uma conta? Cadastrar-se</a>
+        </Signup>
       </Container>
-      </Modal>
-   
-    )
-} 
-
+    </Modal>
+  );
+};

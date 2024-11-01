@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Modal = styled.div`
   position: fixed;
@@ -22,15 +22,15 @@ export const Container = styled.div`
 `;
 
 export const CloseButton = styled.button`
-  position: absolute; 
-  right: 1rem; 
-  top: 1rem; 
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: #000;
-  
+
   &:hover {
     background-color: #efecec;
   }
@@ -42,7 +42,7 @@ export const Logo = styled.div`
   justify-content: center;
   margin-bottom: 1.5rem;
   gap: 0rem;
-  
+
   img {
     width: 46px;
     height: 51px;
@@ -68,14 +68,14 @@ export const SubmitButton = styled.button`
   cursor: pointer;
   margin-top: 1rem;
   width: 100%;
-  
+
   &:hover {
     background-color: #772ce8;
   }
-  
+
   &:disabled {
     color: #c7b8b8;
-    background-color: #F6F6F7;
+    background-color: #f6f6f7;
     cursor: not-allowed;
   }
 `;
@@ -84,14 +84,14 @@ export const LoginLink = styled.a`
   color: #9147ff;
   text-decoration: none;
   font-size: 0.8rem;
-  
+
   &:hover {
     text-decoration: underline;
   }
 `;
 
 export const Signup = styled.div`
- padding: 0.45rem;
+  padding: 0.45rem;
   text-align: center;
   margin-top: 1.5rem;
   font-size: 0.86rem;
@@ -99,13 +99,13 @@ export const Signup = styled.div`
   border-radius: 4px;
 
   &:hover {
-    background-color: #e5e1ea; 
+    background-color: #e5e1ea;
   }
 
-    a {
-    color: #5C16C5;
+  a {
+    color: #5c16c5;
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: none;
       background-color: #e5e1ea;
