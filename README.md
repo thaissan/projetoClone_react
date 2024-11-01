@@ -1,5 +1,5 @@
 # Projeto Individual - Clone Twitch
-![](src\assets\twitch_wordmark_extruded_purple.png)
+<img height="150px" src="src/assets/twitch_wordmark_extruded_purple.png" alt="Logo Twitch"/>
 
 ## React + Vite
 
