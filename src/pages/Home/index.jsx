@@ -3,8 +3,7 @@ import { PiCrownSimpleBold } from "react-icons/pi";
 import { GrInbox } from "react-icons/gr";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { CiBatteryCharging } from "react-icons/ci";
-import { HiOutlineUserCircle } from "react-icons/hi";
-import {Container, Header, Navbar, Search, IconsContainer} from './style'
+import {Container, Header, Navbar, Search, IconsContainer, UserIcon} from './style'
 
 
 export const TwitchHome = () => {
@@ -21,7 +20,11 @@ export const TwitchHome = () => {
         
         <Search>
           <input type="text" placeholder="Buscar" />
-          <BsSearch style={{ marginLeft: '0.5rem'}}/>
+          <BsSearch style={{ 
+            background: '#F7F7F8', 
+            padding: '0.5rem', 
+            borderRadius: '0 5px 5px 0'}}
+            size={20}/>
         </Search>
         
         <IconsContainer>
@@ -33,7 +36,9 @@ export const TwitchHome = () => {
             <CiBatteryCharging style={{ marginRight: '0.2rem', fontSize: '1.2rem' }}/>
             Assista sem anúncios de graça
           </button>
-          <HiOutlineUserCircle size={30} />
+          <UserIcon>
+          <img src="src/assets/abigail.jpg" alt="Icone perfil" />
+          </UserIcon>
         </IconsContainer>
       </Header>
 

@@ -7,9 +7,14 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #e5e5e5;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    padding: 1px;
+  }
 `;
 
 export const Navbar = styled.nav`
@@ -18,14 +23,22 @@ export const Navbar = styled.nav`
   gap: 20px;
 
   img {
-    width: 35px;
-    height: 41px;
+    width: 24px;
+    height: 28px;
     margin-left: 0.7rem;
    }
 
    span{
-    font-weight: bold;
+    font-weight: 600;
    }
+
+   @media (max-width: 768px) {
+    gap: 10px; 
+
+    span{
+      display: none;
+    }
+  }
 `;
 
 export const Search = styled.div`
@@ -38,8 +51,8 @@ export const Search = styled.div`
   input {
     width: 70%;
     padding: 8px;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
+    border: 0.1rem solid #808084;
+    border-radius: 5px 0 0 5px;
 
     &:focus {
     outline: none;
@@ -58,7 +71,6 @@ export const IconsContainer = styled.div`
   img {
     width: 30px;
     height: 30px;
-    cursor: pointer;
   }
 
   button{
@@ -70,4 +82,14 @@ export const IconsContainer = styled.div`
     cursor: pointer;
     font-weight: bold;
   }
+`;
+
+export const UserIcon = styled.div`
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
 `;
