@@ -17,15 +17,26 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
 
   img {
     width: 24px;
     height: 28px;
     margin-left: 0.7rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   span {
     font-weight: 600;
+
+     &:hover {
+      color: #7f5eea; 
+    }
   }
 
   @media (max-width: 768px) {
@@ -43,6 +54,7 @@ export const Search = styled.div`
   align-items: center;
   flex: 1;
   margin: 0 20px;
+  cursor: pointer;
 
   input {
     width: 70%;

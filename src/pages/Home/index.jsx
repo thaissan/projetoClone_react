@@ -8,12 +8,14 @@ import {
   LiveOnline,
   StreamLayout,
   StreamCard,
+  CustomDivider,
 } from "./style";
 import { HeaderComponent } from "../../components/HeaderComponent";
 import { RedCircle } from "../../components/RedCircle";
 import { UserProfile } from "../../components/UserProfile";
 import { TbArrowBarLeft } from "react-icons/tb";
 import { LuArrowDownUp } from "react-icons/lu";
+import { FaAngleDown } from "react-icons/fa";
 
 export const TwitchHome = () => {
   const followedChannels = [
@@ -73,7 +75,7 @@ export const TwitchHome = () => {
   const recommendedStreams = [
     {
       id: 1,
-      img: "https://i.imgur.com/9CeyaUI.png",
+      img: "https://ik.imagekit.io/thaissan/Clone%20Twitch/id1.png?updatedAt=1730568850106.png",
       title: "HALLOWEEN - TERRORIZINHO JA...",
       streamer: "alanzoka",
       game: "Red Dead Redemption",
@@ -82,7 +84,7 @@ export const TwitchHome = () => {
     },
     {
       id: 2,
-      img: "https://i.imgur.com/9CeyaUI.png",
+      img: "https://ik.imagekit.io/thaissan/Clone%20Twitch/id3.png?updatedAt=1730568850055.png",
       title: "NOITE DO TERROR - JOGANDO PHASMOPHOBIA",
       streamer: "felipehmc",
       game: "Phasmophobia",
@@ -91,22 +93,13 @@ export const TwitchHome = () => {
     },
     {
       id: 3,
-      img: "https://i.imgur.com/9CeyaUI.png",
+      img: "https://ik.imagekit.io/thaissan/Clone%20Twitch/id2.png?updatedAt=1730568849995.png",
       title: "MARATONA DE FORTNITE - DESAFIOS INSANOS",
-      streamer: "gaules",
+      streamer: "Fortin",
       game: "Fortnite",
       viewers: "20,1 mil",
       tags: ["Competitivo", "Battle Royale", "Português"],
     },
-    {
-      id: 4,
-      img: "https://i.imgur.com/9CeyaUI.png",
-      title: 'RETRO GAMING - CLASSICOS DOS ANOS 90',
-      streamer: 't3ddy',
-      game: 'Super Mario 64',
-      viewers: '5,7 mil',
-      tags: ['Nostalgia', 'Single Player', 'Português'],
-    }
   ];
 
   return (
@@ -164,10 +157,19 @@ export const TwitchHome = () => {
         </Sidebar>
 
         <MainContainer>
-          <div style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}> 
-            <img style={{maxWidth: 1080}} src="https://imgur.com/LpZpcLQ.png" alt="" />  
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              style={{ maxWidth: 1080 }}
+              src="https://imgur.com/LpZpcLQ.png"
+              alt=""
+            />
           </div>
-
           <h3 style={{ color: "#7C34E9", display: "inline" }}>
             Canais ao vivo{" "}
           </h3>
@@ -183,7 +185,7 @@ export const TwitchHome = () => {
                 <p>{stream.streamer}</p>
                 <p>{stream.game}</p>
                 <p>{stream.viewers} espectadores</p>
-                <div>
+                <div style={{ marginTop: "8px" }}>
                   {stream.tags.map((tag) => (
                     <span
                       key={tag}
@@ -193,6 +195,7 @@ export const TwitchHome = () => {
                         background: "#e5e5e5",
                         padding: "2px 8px",
                         borderRadius: "12px",
+                        cursor: "pointer",
                       }}
                     >
                       {tag}
@@ -202,6 +205,11 @@ export const TwitchHome = () => {
               </StreamCard>
             ))}
           </StreamLayout>
+          <div style={{ marginTop: "1rem" }}>
+            <CustomDivider>
+              Mostrar Mais <FaAngleDown />
+            </CustomDivider>
+          </div>
         </MainContainer>
       </div>
     </Container>

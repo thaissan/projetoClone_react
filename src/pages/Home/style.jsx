@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Divider from "@mui/material/Divider";
 
 export const Container = styled.div`
   max-width: 100%;
@@ -18,6 +19,7 @@ export const SidebarDivs = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  cursor: pointer;
 
   #titleFollowed {
     font-weight: 600;
@@ -81,18 +83,30 @@ export const LiveOnline = styled.span`
 `;
 
 export const StreamLayout = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 `;
 
 export const StreamCard = styled.div`
+  flex: 1 30rem;
+  max-width: 340px;
+  padding: 0;
+
   img {
-    width: 300px;
-    height: 150px;
+    width: 340px;
+    height: 190px;
     object-fit: cover;
-    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: -4px 4px 0 0 #7f5eea, 0 4px 0 0 #7f5eea;
+    }
   }
 
   h3 {
@@ -106,3 +120,9 @@ export const StreamCard = styled.div`
   }
 `;
 
+export const CustomDivider = styled(Divider)`
+  color: #7135cc;
+  font-weight: bold;
+  font-size: small;
+  cursor: pointer;
+`;
