@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Header, Navbar, Search, IconsContainer } from "./style";
 import UserProfile from "../UserProfile";
 import { BsSearch, BsThreeDotsVertical } from "react-icons/bs";
@@ -6,12 +7,15 @@ import { GrInbox } from "react-icons/gr";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { CiBatteryCharging } from "react-icons/ci";
 import abigailImg from "../../assets/abigail.jpg";
+import { IoMdExit } from "react-icons/io";
 
 export const HeaderComponent = () => {
   return (
     <Header>
       <Navbar>
-        <img src="src/assets/glitch_flat_purple.png" alt="TwitchLogo" />
+        <Link to="/login">
+          <img src="src/assets/glitch_flat_purple.png" alt="TwitchLogo" />
+        </Link>
         <span>Seguindo</span>
         <span>Procurar</span>
         <BsThreeDotsVertical />
@@ -41,6 +45,9 @@ export const HeaderComponent = () => {
           Assista sem anúncios de graça
         </button>
         <UserProfile imgSrc={abigailImg} altText={"Icone perfil"} />
+        <Link to="/login">
+          <IoMdExit />
+        </Link>
       </IconsContainer>
     </Header>
   );

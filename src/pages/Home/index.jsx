@@ -104,7 +104,6 @@ export const TwitchHome = () => {
 
   return (
     <Container>
-      <HeaderComponent />
       <div style={{ display: "flex" }}>
         <Sidebar>
           <SidebarDivs>

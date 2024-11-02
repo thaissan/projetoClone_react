@@ -12,14 +12,19 @@ import {
   Signup,
 } from "./style";
 import { InputField } from "../../components/InputField";
+import { useNavigate } from 'react-router-dom';
+
 
 export const TwitchLogin = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login:", { user, password });
+    if (user && password) {
+      navigate('/home');
+    }
   };
 
   return (
@@ -46,10 +51,10 @@ export const TwitchLogin = () => {
           />
 
           <LoginLink href="#">Problemas para efetuar login?</LoginLink>
-
+          
           <SubmitButton type="submit" disabled={!user || !password}>
             Entrar
-          </SubmitButton>
+          </SubmitButton>         
         </form>
 
         <Signup>
